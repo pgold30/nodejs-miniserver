@@ -1,13 +1,13 @@
 Set Up Node.js Express Server
 Let’s start by building our API server, which fetches and returns a random programming quote. First, we create a project folder, initialize a project with yarn, and then add our dependencies:
-
+```
 ~$ mkdir project && cd project
-
 ~/project$ yarn init
 ...
-
 ~/project$ yarn add express axios
 ...
+```
+
 What happens in index.js?
 Let’s briefly explain what happens in this file:
 
@@ -24,7 +24,7 @@ Let’s briefly explain what happens in this file:
 In our terminal, we run node index.js to start our API server.
 
 In a separate terminal, we use curl to send several requests to our API server.
-
+```
 ~$ curl localhost:8080
 "Coding is "90 percent finished" for half of the total coding time. Debugging is "99 percent complete" most of the time." - Fred Brooks
 
@@ -36,12 +36,16 @@ In a separate terminal, we use curl to send several requests to our API server.
 
 ~$ curl localhost:8080
 "Nobody knows how to build really complicated hardware systems, so designing hardware tends to be simpler. Software is much more complicated." - Butler Lampson
-Looking back at our terminal window with the API server running, this is what we see:
+```
 
+Looking back at our terminal window with the API server running, this is what we see:
+```
 ~/project$ node index.js 
 Listening on port 8080
 Request: 1
 Request: 2
 Request: 3
 Request: 4
+```
+
 Excellent. Our API server is running as expected. We’ll restart it to reset the request counter, and we’ll leave it running in our terminal window.
